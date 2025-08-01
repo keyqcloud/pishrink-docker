@@ -4,6 +4,11 @@ A lightweight Docker-based tool for shrinking and optionally compressing Raspber
 
 This wrapper allows you to shrink and compress Raspberry Pi OS images **without needing to install Linux tools directly on your macOS or Windows system**.
 
+* On macOS and Windows, Docker Desktop uses a virtualized Linux kernel. The `--privileged` and `/dev:/dev` mount allow access to loop devices required by PiShrink.
+* This is not recommended for general-purpose containers, but safe for this one-off tool.
+* `run-pishrink.sh` — CLI wrapper for shrinking/compressing `.img` files ([see usage](#-usage))
+
+
 ## 🛠 Requirements
 
 * [Docker](https://www.docker.com/) installed
