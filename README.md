@@ -51,14 +51,26 @@ You can also run PiShrink directly using `docker run`:
 
 #### Shrink only (no compression):
 
+*Linux/macOS*
 ```bash
 docker run --rm --privileged -v /dev:/dev -v "$PWD:/data" pishrink image.img
 ```
 
+*Windows*
+```powershell
+docker run --rm --privileged -v /dev:/dev -v "${PWD}:/data" pishrink image.img
+```
+
 #### Shrink and compress with `xz`:
 
+*Linux/macOS*
 ```bash
 docker run --rm --privileged -v /dev:/dev -v "$PWD:/data" pishrink -Z -a image.img
+```
+
+*Windows*
+```powershell
+docker run --rm --privileged -v /dev:/dev -v "${PWD}:/data" pishrink -Z -a  image.img
 ```
 
 This will shrink and compress the image using `xz` with multithreading. The output will be `image.img.xz` in the same directory.
