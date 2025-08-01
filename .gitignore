@@ -1,0 +1,35 @@
+# macOS system files
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Windows system files
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Unix swap/backup files
+*~
+*.swp
+*.swo
+*.bak
+
+# Compressed Raspberry Pi images
+*.img
+*.img.gz
+*.img.xz
+
+# PiShrink log
+pishrink.log
+
+# Docker-related files (optional)
+*.container
+*.tar
+
+# Build scripts or temporary output
+*.tmp
+*.log
+*.out
+
+# VSCode settings (if you're using it)
+.vscode/
